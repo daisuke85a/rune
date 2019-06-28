@@ -38,7 +38,7 @@ class HomeController extends Controller
                 $sumRune += $helpHistory->rune;
             }
 
-            $yen = (int)$sumRune * (int)$runeRate->rate;
+            $yen = (float)$sumRune * (float)$runeRate->rate;
 
             return view('home', compact('runeRate','sumRune','yen'));
         }

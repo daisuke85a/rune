@@ -16,7 +16,7 @@ class CreateRuneRatesTable extends Migration
         Schema::create('rune_rates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('mode');
-            $table->integer('rate');
+            $table->decimal('rate' , 8, 2);
             $table->bigInteger('user_id');
             $table->timestamps();
         });

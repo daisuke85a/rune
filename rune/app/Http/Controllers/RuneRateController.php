@@ -37,6 +37,7 @@ class RuneRateController extends Controller
     public function store(Request $request)
     {
         //
+
         RuneRate::create([
             'mode' => request('mode'),
             'rate' => request('rate'),

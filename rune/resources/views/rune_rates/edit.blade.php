@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="rate">ルーンレート</label>
-                    <input type="number" class="form-control" id="rate" name="rate" placeholder="" value="{{$rune_rate->rate}}">
+                    <input type="number" class="form-control" id="rate" name="rate" placeholder="" value="{{$rune_rate->rate}}  step="0.01">
                 </div>
                 <button type="submit" class="btn btn-primary">反映</button>
             </form>

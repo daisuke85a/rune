@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group">
                     <label for="rate">ルーンレート(1ルーンあたりの円)</label>
-                    <input type="number" class="form-control" id="rate" name="rate" placeholder="" value="">
+                    <input type="number" class="form-control" id="rate" name="rate" placeholder="0.25" value="0.25" step="0.01">
                 </div>
                 <button type="submit" class="btn btn-primary">登録</button>
             </form>
