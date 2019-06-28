@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\RuneRate;
+use App\HelpHistory;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -25,12 +25,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $runeRateExists = RuneRate::Where('user_id', Auth::user()->id )->exists();
-        if($runeRateExists === false){
+        $runeRateExists = RuneRate::Where('user_id', Auth::user()->id)->exists();
+        if ($runeRateExists === false) {
             return view('rune_rates.create');
-        }
-        else{
-            return view('home');
+        } else {
+            $runeRate = RuneRate::Where('user_id', Auth::user()->id)->first();
+
+            $helpHistories = HelpHistory::Where('user_id', Auth::user()->id)->get();
+
+            $sumRune = 0;
+            foreach ($helpHistories as $helpHistory) {
+                $sumRune += $helpHistory->rune;
+            }
+
+            $yen = (int)$sumRune * (int)$runeRate->rate;
+
+            return view('home', compact('runeRate','sumRune','yen'));
         }
     }
 }
