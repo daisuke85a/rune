@@ -36,6 +36,7 @@ Route::get('/help/create', function () {
 Route::resources([
     'help_items' =>'HelpItemController',
     'help_histories' =>'HelpHistoryController',
+    'rune_rates' =>'RuneRateController',
 ]);
 
 Auth::routes();

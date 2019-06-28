@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\RuneRate;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class RuneRateController extends Controller
@@ -36,6 +37,13 @@ class RuneRateController extends Controller
     public function store(Request $request)
     {
         //
+        RuneRate::create([
+            'mode' => request('mode'),
+            'rate' => request('rate'),
+            'user_id' => Auth::user()->id,
+        ]);
+
+        return redirect('/home');
     }
 
     /**

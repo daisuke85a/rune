@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\RuneRate;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $runeRateExists = RuneRate::Where('user_id', Auth::user()->id )->exists();
+        if($runeRateExists === false){
+            return view('rune_rates.create');
+        }
+        else{
+            return view('home');
+        }
     }
 }
