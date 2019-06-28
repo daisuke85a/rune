@@ -33,7 +33,10 @@ Route::get('/help/create', function () {
 });
 
 
-
+Route::resources([
+    'help_items' =>'HelpItemController',
+    'help_histories' =>'HelpHistoryController',
+]);
 
 Auth::routes();
 

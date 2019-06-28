@@ -24,7 +24,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
             var actions = $("table td:last-child").html();
@@ -78,7 +78,7 @@
             });
         });
 
-    </script>
+    </script> --}}
 </head>
 
 <body>
@@ -125,13 +125,13 @@
                                     style="display: none;">
                                     @csrf
                                 </form>
-                                <a class="dropdown-item" href="/help">
+                                <a class="dropdown-item" href="/help_histories">
                                     お手伝い履歴
                                 </a>
-                                <a class="dropdown-item" href="/rune/edit">
+                                <a class="dropdown-item" href="/runes/edit">
                                     ルーン管理
                                 </a>
-                                <a class="dropdown-item" href="/help/edit">
+                                <a class="dropdown-item" href="/help_items">
                                     お手伝い管理
                                 </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();

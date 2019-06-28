@@ -10,7 +10,7 @@
             <p>900円</p>
             <h2>ルーンのレート</h2>
             <p>3円/ルーン</p>
-            <button type="button" class="btn btn-primary btn-lg btn-block"  onclick="location.href='/help/create'">お手伝いした</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block"  onclick="location.href='/help_histories/create'">お手伝いした</button>
         </div>
     </div>
 </div>
