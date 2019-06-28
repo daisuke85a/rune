@@ -39,5 +39,9 @@ Route::resources([
     'rune_rates' =>'RuneRateController',
 ]);
 
+Route::get('/rune_rates/edit', 'RuneRateController@editLoginUser');
+
+Route::get('/rune_manage', 'RuneRateController@editLoginUser');
+
 Auth::routes();
 

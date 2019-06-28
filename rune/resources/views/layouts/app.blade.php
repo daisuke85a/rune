@@ -128,7 +128,7 @@
                                 <a class="dropdown-item" href="/help_histories">
                                     お手伝い履歴
                                 </a>
-                                <a class="dropdown-item" href="/runes/edit">
+                                <a class="dropdown-item" href="/rune_manage">
                                     ルーン管理
                                 </a>
                                 <a class="dropdown-item" href="/help_items">

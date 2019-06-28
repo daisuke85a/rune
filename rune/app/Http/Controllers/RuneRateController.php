@@ -69,6 +69,15 @@ class RuneRateController extends Controller
         //
     }
 
+    public function editLoginUser()
+    {
+        //
+        $runeRate = RuneRate::Where('user_id', Auth::user()->id)->first();
+
+        return view('rune_rates.edit', compact('runeRate'));
+    }
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -78,7 +87,17 @@ class RuneRateController extends Controller
      */
     public function update(Request $request, RuneRate $runeRate)
     {
-        //
+        if ($runeRate->user_id === Auth::user()->id) {
+            $runeRate->update(
+                [
+                    'mode' => request('mode'),
+                    'rate' => request('rate'),
+                ]
+            );
+        }
+
+        return redirect('/home');
+
     }
 
     /**
