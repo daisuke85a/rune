@@ -11,10 +11,29 @@
 |
 */
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/rune/edit', function () {
+    return view('rune.edit');
+});
+
+Route::get('/help', function () {
+    return view('help.index');
+});
+Route::get('/help/edit', function () {
+    return view('help.edit');
+});
+Route::get('/help/create', function () {
+    return view('help.create');
+});
+
+
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
