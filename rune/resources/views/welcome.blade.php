@@ -10,7 +10,12 @@
             <p>お小遣いのレートを決められる</p>
             <p>お手伝いの内容を管理できる</p>
             <p>レート：100円イコール25ルーン。その時々で100円が10ルーンになったりならなかったり・・で世界情勢をそこから肌で感じてもらいたい</p>
-            <button type="button" class="btn btn-primary btn-lg btn-block"  onclick="location.href='/home'">はじめる！</button>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block"
+                onclick="location.href='/register'">ユーザー登録する</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block"
+                onclick="location.href='/home'">ログインする</button>
+
         </div>
     </div>
 </div>
